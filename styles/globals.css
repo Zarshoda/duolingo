@@ -13,4 +13,106 @@ a {
 
 * {
   box-sizing: border-box;
+  background-color: rgb(176, 176, 226);
+}
+
+.header{
+  background-color: rgb(99, 99, 190);
+  position: fixed top;
+}
+
+.header img{
+  width: 150px;
+  background-color: rgb(99, 99, 190);
+}
+
+.header p{
+  background-color: rgb(99, 99, 190);
+}
+
+.header p .icon{
+  background-color: rgb(99, 99, 190);
+}
+
+.cardd{
+  padding-top: 100px;
+}
+
+.cardd p{
+  padding-left: 150px;
+  padding-right: 150px;
+  text-align: center;
+}
+
+.start, .yet{
+  border-radius: 10px;
+  padding: 10px;
+  width: 300px;
+  font-weight: bold;
+  color: white;
+  border: rgb(99, 99, 190) solid 2px;
+  box-shadow: rgba(99, 99, 190, 0.425) 0 10px 30px 0;
+}
+
+.start{
+  background-color: rgb(98, 167, 98);
+}
+
+.yet{
+  background-color: rgb(176, 176, 226);
+}
+
+.languages{
+  background-color: rgb(99, 99, 190);
+}
+
+.languages a, .languages a:hover{
+  background-color: rgb(99, 99, 190);
+  padding-left: 50px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.but a, .but a:hover{
+  background-color: rgb(98, 167, 98);
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.sec1 img{
+  width: 150px;
+}
+
+.text{
+  padding: 20px 30px;
+  margin: 30px 50px;
+  border: white 2px solid;
+  font-size: 25px;
+  width: 50%;
+  border-radius: 10px;
+}
+
+#input{
+  width: 80%;
+  height: 200px;
+  font-size: 20px;
+  padding: 20px 30px;
+  color: white;
+  border-radius: 10px;
+  border: white solid 2px;
+  outline: none;
+}
+
+.button{
+  border: white 2px solid;
+  border-radius: 10px;
+  color: white;
+  padding: 10px 20px;
+}
+
+.languages button{
+  border: none;
+  background-color: rgb(99, 99, 190);
 }
