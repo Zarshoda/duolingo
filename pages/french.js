@@ -16,6 +16,8 @@ export default function French() {
     const [natija, setNatija] = useState("");
     const [id, setId] = useState(0);
     const [next, setNext] = useState("d-none");
+    const [body, setBody] = useState("");
+    const [end, setEnd] = useState("d-none")
 
     const input = (e) => {
         setAnswer(e.target.value)
@@ -31,17 +33,30 @@ export default function French() {
         }
     }
 
+    const propusk = () => {
+        if (id <= 3) setId(id + 1);
+        else fin();
+    }
+
     const nextQues = () => {
-        setAnswer("");
-        setNatija("");
-        setId(id + 1);
-        setNext("d-none");
-        document.getElementById('input').value = "";
+        if (id <= 3) {
+            setAnswer("");
+            setNatija("");
+            setId(id + 1);
+            setNext("d-none");
+            document.getElementById('input').value = "";
+        }
+        else fin();
+    }
+
+    const fin = () => {
+        setEnd("");
+        setBody("d-none");
     }
 
     return (
         <div className="container">
-            <div className="row">
+            <div className={"row " + body}>
                 <div className="col-lg-8 col-sm-12 m-auto mt-5">
                     <div className="carddd text-white">
                         <p className="fs-2 fw-bold">Введите фразу</p>
@@ -55,12 +70,16 @@ export default function French() {
                         </div>
                         <hr />
                         <div className="d-flex justify-content-between">
-                            <button className="button">ПРОПУСТИТЬ</button>
+                            <button className="button" onClick={propusk}>ПРОПУСТИТЬ</button>
                             <button className="button" onClick={check}>ПРОВЕРИТЬ</button>
                             <button className={'button ' + next} onClick={nextQues}>СЛЕДУЮЩИЙ</button>
                         </div>
+                        <br /> <br /> <br />
                     </div>
                 </div>
+            </div>
+            <div className={"text-center mt-5 " + end}>
+                <h1 className="text-white">The End</h1>
             </div>
         </div>
     )

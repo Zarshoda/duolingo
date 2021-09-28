@@ -26,12 +26,13 @@ a {
   background-color: rgb(99, 99, 190);
 }
 
-.header p{
+.header button .icon{
   background-color: rgb(99, 99, 190);
 }
 
-.header p .icon{
+.header button{
   background-color: rgb(99, 99, 190);
+  border: none;
 }
 
 .cardd{
@@ -115,4 +116,22 @@ a {
 .languages button{
   border: none;
   background-color: rgb(99, 99, 190);
+}
+
+.langs li{
+  list-style-type: none;
+  padding: 5px;
+  margin: 0;
+}
+
+.langs{
+  position: fixed;
+  top: 50px;
+  right: 50px;
+  border: rgb(99, 99, 190) solid 1px;
+  padding: 10px;
+}
+.langs ul{
+  padding: 0;
+  margin: 0;
 }

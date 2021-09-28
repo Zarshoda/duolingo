@@ -1,14 +1,29 @@
 import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "@material-ui/core";
-
+import { useState } from "react";
 export default function Home() {
+
+  const [lang, setLang] = useState("d-none");
+
+  const change = () => {
+    if (lang == 'd-none') setLang("");
+    else setLang("d-none")
+  }
+
   return (
     <div>
       <header className="d-flex justify-content-between align-items-center py-4 px-5 header">
         <img className="d-none d-lg-flex" src="https://d35aaqx5ub95lt.cloudfront.net/images/dca3b978d07a7dfc05adb1d5526e9e21.svg" alt="" />
-        <p className="text-white fw-bold m-0">ЯЗЫК САЙТА: РУССКИЙ <FontAwesomeIcon className="icon" icon={faAngleDown} /> </p>
+        <button className="text-white fw-bold m-0" onClick={change}>ЯЗЫК САЙТА: РУССКИЙ <FontAwesomeIcon className="icon" icon={faAngleDown} /> </button>
       </header>
+      <div className={lang + " langs"}>
+        <ul>
+          <li>Русский</li>
+          <li>Английский</li>
+          <li>Французский</li>
+        </ul>
+      </div>
       <div className="container">
         <img className="d-block m-auto d-lg-none w-25 mt-5" src="https://d35aaqx5ub95lt.cloudfront.net/images/dca3b978d07a7dfc05adb1d5526e9e21.svg" alt="" />
         <div className="row mb-5">
@@ -26,7 +41,7 @@ export default function Home() {
                 <Link href="/english">
                   <a>
                     НАЧАТЬ
-                </a>
+                  </a>
                 </Link>
               </button>
               <button className="d-block m-auto yet">У МЕНЯ УЖЕ ЕСТЬ АККАУНТ</button>
@@ -39,14 +54,14 @@ export default function Home() {
           <Link href="/english">
             <a>
               АНГЛИЙСКИЙ
-          </a>
+            </a>
           </Link>
         </button>
         <button>
           <Link href="/french">
             <a>
               ФРАНЦУЗСКИЙ
-          </a>
+            </a>
           </Link>
         </button>
       </div>
